@@ -26,3 +26,14 @@ function errorMessage(msg) {
 }
 
 
+async function getResult(searchVal) {
+    const response = await fetch(apiURL + searchVal);
+    const results = await response.json();
+
+    console.log(results);
+    if (results.query.search.length == 0) {
+        return errorMessage("Invalid search, please enter another search term.");
+    } else {
+        displayResults(results);
+    }
+}
