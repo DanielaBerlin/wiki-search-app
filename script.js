@@ -20,5 +20,9 @@ form.addEventListener('submit', (e) => {
 
 //Error Message
 function errorMessage(msg) {
-    
+    errorMsg.style.display = "block";
+    line.style.display = "block";
+    errorMsg.textContent = msg;
 }
+
+
