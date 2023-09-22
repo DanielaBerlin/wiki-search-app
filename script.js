@@ -10,5 +10,15 @@ const apiURL =
 form.addEventListener('submit', (e) => {
   e.preventDefault();
 
-  const searchValue = search.value;
+    const searchValue = search.value;
+    if (searchValue === "") {
+        errorMessage("Search cannot be empty, please enter a search term.")
+    } else {
+        getResult(searchValue);
+    }
 });
+
+//Error Message
+function errorMessage(msg) {
+    
+}
